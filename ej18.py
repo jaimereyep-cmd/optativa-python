@@ -29,12 +29,14 @@ while True:
                     case "c":
                         for i, p in enumerate(productos):
                             print(f"{i}: {p}")
-                        indice = input("introduce el indice a modificar: ")
+                        indice = int(input("introduce el indice a modificar: "))
                         nuevo = input("Nuevo nombre del producto: ")
                         productos[indice] = nuevo
                         print("Producto modificado")
                     case "d":
-                        indice = input("Introduce el indice que quieres eliminar: ")
+                        for i, p in enumerate(productos):
+                            print(f"{i}: {p}")
+                        indice = int(input("Introduce el indice que quieres eliminar: "))
                         productos.remove(productos[indice])
             case 4:
                 print("Saliendo del programa...")
