@@ -6,8 +6,8 @@ while True:
 
     print("--- Menu Fruteria de la Huerta ---")
     print("1. Gestion de listas")
-    print("2. ")
-    print("3. ")
+    print("2. Consulta de tupla")
+    print("3. Gestion de diccionario")
     print("4. Salir del programa")
 
     try:
@@ -38,6 +38,25 @@ while True:
                             print(f"{i}: {p}")
                         indice = int(input("Introduce el indice que quieres eliminar: "))
                         productos.remove(productos[indice])
+            case 2:
+                print(info_tienda)
+            case 3:
+                print ("\n a) Catalogo completo\n b) Buscar concreta\n c) añadir o actualizar producto")
+
+                sub = input("Introduce una opcion: ").lower()
+
+                match sub:
+                    case "a":
+                        print(precios)
+                    case "b":
+                        busqueda = input("Que fruta buscas?: ")
+                        print(precios[busqueda])
+                    case "c":
+                        opcion = input("Que vas a hacer? Añadir o Actualizar").lower
+                        if (opcion == añadir): 
+                            nuevo = input("Introduce el nombre de la nueva fruta:")
+                            precios.append[nuevo]
+                        else if (opcion === actualizar): print("hola")
             case 4:
                 print("Saliendo del programa...")
                 break
