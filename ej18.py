@@ -40,6 +40,11 @@ while True:
                         productos.remove(productos[indice])
             case 2:
                 print(info_tienda)
+                print(len(info_tienda))
+                print(info_tienda[0])
+                print(info_tienda[1])
+                print(info_tienda[2])
+                print(info_tienda[3])
             case 3:
                 print ("\n a) Catalogo completo\n b) Buscar concreta\n c) añadir o actualizar producto")
 
@@ -47,16 +52,18 @@ while True:
 
                 match sub:
                     case "a":
-                        print(precios)
+                        for f, p in precios.items():
+                            print(f"Productos: {f}, Precios: {p}")
                     case "b":
                         busqueda = input("Que fruta buscas?: ")
                         print(precios[busqueda])
                     case "c":
                         opcion = input("Que vas a hacer? Añadir o Actualizar").lower
-                        if (opcion == añadir): 
+                        if opcion == "añadir":
                             nuevo = input("Introduce el nombre de la nueva fruta:")
-                            precios.append[nuevo]
-                        else if (opcion === actualizar): print("hola")
+                            precio[fruta]=nuevo
+                        elif opcion == "actualizar":
+                            print("hola")
             case 4:
                 print("Saliendo del programa...")
                 break
